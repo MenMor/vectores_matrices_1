@@ -62,3 +62,40 @@ print(matriz)
 
 suma_filas = matriz.sum(axis=1)  # Suma de todas las filas
 print("\n", suma_filas)
+
+
+
+
+a = np.arange(4)
+a.resize((8,))
+print(a)
+
+# Vector a columna:
+vector = np.array([1, 2, 3])
+np.shape(vector)
+matrix_col = vector[:, np.newaxis]
+print(matrix_col)
+
+# Concatenar
+a = np.array([[1, 5, 9], [2, 6, 10]])
+b = np.array([[5, 6, 7]])
+c = np.concatenate((a, b), axis=0)
+# agregar columna np.concatenate((a, b), axis=1)
+print(c)
+
+# funcion prod
+c = np.prod([[1., 2.], [3., 4.]], axis=0)  # multiplica cada columna
+b = np.prod([[5, 7], [9, 9]], axis=1)  # multiplica cada fila
+print(c)
+print(b)
+
+# calcular factorial con decimal
+valor = float(input("Ingrese valor para calcular factorial: "))
+fact = np.prod(np.arange(2, valor+1))
+print(fact)
+
+
+# multiplica elementos del vector y despues lo multiplica por el valor de initial
+j = np.prod([2, 3], initial=5)
+print(j)
+

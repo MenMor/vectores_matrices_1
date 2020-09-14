@@ -13,7 +13,7 @@ for i in range(len(matriz)):
 
 w = []
 for j in range(len(matriz)):
-    suma_c = sum([i[j] ** 3 for i in matriz])
+    suma_c = sum([i[j] ** 3 for i in matriz])  # Creo una lista compuesta para crear w con valores de cada columna
     raiz_c = suma_c ** (1/3)
     raiz_c = round(raiz_c, 2)
     w = np.append(w, raiz_c)
@@ -23,7 +23,7 @@ for j in range(len(matriz)):
 matriz = matriz.astype(float)
 
 # Agrego columna 'v' a matriz
-matriz = np.insert(matriz, matriz.shape[1], v, 1)
+matriz = np.insert(matriz, matriz.shape[1], v, 1)  # shape es para indicar [0] fila o [1] columna que se insertara
 
 print('\n', matriz)
 print(w)

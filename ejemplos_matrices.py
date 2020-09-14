@@ -6,14 +6,14 @@ print(matriz)
 
 
 # Recorrer matriz invertida
-matriz = np.array([[0, 1,  2,  3],
-                  [4,  5,  6,  7],
-                  [8,  9, 10, 11],
-                  [0,  8,  7,  6]])
-for i in range(len(matriz)):
-    for j in range(len(matriz)-1, -1, -1):
-        print(matriz[i][j], end='')
-
+matriz_1 = [[0, 1,  2,  3],
+            [4,  5,  6,  7],
+            [8,  9, 10, 11],
+            [0,  8,  7,  6]]
+for i in range(len(matriz_1)):
+    for j in range(len(matriz_1[i])-1, -1, -1):
+        print(matriz_1[i][j], end='  ')
+    print()
 # suma de matriz a + b
 
 a = np.random.randint(10, size=(5, 5))
@@ -33,3 +33,13 @@ print(c)
 #print(np.insert(matriz_1, matriz_1.shape[0], np.array((20, 20, 20, 20, 20, 20)), 0))
 #agregar columna
 #print(np.insert(matriz_1, matriz_1.shape[0], np.array((20, 20, 20, 20, 20, 20)), 1))
+
+
+
+"""manejar la mayor parte del trabajo con listas y luego utilizar el resultado como una matriz.
+
+ur_list = []
+for col in columns:
+    ur_list.append(list(col))
+
+mat = np.matrix(ur_list)"""
