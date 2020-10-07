@@ -53,14 +53,14 @@ for i in range(len(binario_entero)-1, -1, -1):
 
 # calcúlo parte decimal a binario
 binario_decimal = [".", ]
-i = 2
-while i == 2:
+i = 1
+while i <= 2:
     decimal_num *= 2
     resultado = decimal_num // 1
-    resultado = round(resultado)
-    binario_decimal.append(resultado)
-    if decimal_num == 1:
-        i = 5
+    resultado = int(resultado)
+    if resultado == 0 or resultado == 1:
+        binario_decimal.append(resultado)
+    i += 1
 
 # Hago una sola lista de resultado
 for i in range(0, len(binario_decimal)):

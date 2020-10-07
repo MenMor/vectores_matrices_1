@@ -24,6 +24,7 @@ for j in range(len(matriz)):
     suma_c = suma_c ** (1 / 3)
     w = np.append(w, suma_c)
 
+# multiplicar dos verctores
 sum = 0
 for i in range(0, len(w)):
     for j in range(0, len(vt[i])):

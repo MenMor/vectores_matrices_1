@@ -19,6 +19,13 @@ for j in range(len(matriz)):
     w = np.append(w, raiz_c)
 
 
+# Generar vectores de forma eficiente. sum(1) suma por filas y .sum(0) suma por columnas
+vector_v = np.around(((matriz**2).sum(1)**(1/2)), 2)
+vector_w = np.around(((matriz**3).sum(0)**(1/3)), 2)
+print(vector_v)
+print(vector_w)
+
+
 # Convierto matriz de int a float
 matriz = matriz.astype(float)
 
@@ -28,6 +35,9 @@ matriz = np.insert(matriz, matriz.shape[1], v, 1)  # shape es para indicar [0] f
 print('\n', matriz)
 print(w)
 
-
+a = int(input(" : "))
+b = int(input(" : "))
+mult = np.sum(np.arange(1, b))
+print(mult)
 
 # matriz = np.insert(matriz, matriz.shape[0], w, 0)

@@ -1,8 +1,9 @@
 import numpy as np
 
 vector_1 = np.array([1, 2, 3, 4, 5, 6])  # Crear vector
-print(vector_1[1:len(vector_1)-1])
+print(vector_1[1:len(vector_1)-1])  # imprime desde elemento 1 hasta elemento -1
 
+# vector con valores elevados al cuadradro con rango de 0 hasta 9 solo de números pares
 vector_2 = np.array([i**2 for i in range(10) if i ** 2 % 2 == 0])
 print(vector_2)
 
@@ -12,9 +13,9 @@ print(vector_pares)
 vector_impar = np.array([i for i in range(0, 10, 3)])
 print(vector_impar)
 
- # Cedula, digito verificador con vector
+# Cedula, digito verificador con vector
 
-cedula = np.anage(9)
+cedula = np.arange(9)
 for i in range(0, len(cedula)):
     cedula[i] = int(input(f"Ingrese {i+1} dígito de cédula: "))
 print(cedula)
@@ -36,8 +37,20 @@ else:
     print(f"Digito verificador : 0")
 
 
+# Agregar digito por digito a una lista
+cedula_t = int(input(f"Ingrese 8 primeros dígitos de cédula: "))
+cedula = []
+i = 4
+while i == 4:
+    ultimo = cedula_t % 10
+    cedula.append(ultimo)
+    cedula_t //= 10
+    if cedula_t == 0:
+        i = 7
+cedula.reverse()
+print(cedula)
 
-# Cuadrados de un numero
+# Cuadrado de un numero
 n = int(input("Ingrese valor: "))
 print(np.sum(np.arange(1, 2*n, 2)))  # Cuadrado de un numero usando solo sumas
 

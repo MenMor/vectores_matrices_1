@@ -17,9 +17,14 @@ for i in range(len(matriz)):
     w[0, i] = np.round(np.sum(matriz[:, i] ** 2) ** (1 / 3), 2)
 print(w)
 
+vector_v = np.around(((matriz**2).sum(1)**(1/2)), 2)
+vector_w = np.around(((matriz**2).sum(0)**(1/3)), 2)
+print(vector_v)
+print(vector_w)
+
 # cambio vector a matriz columna (transpuesta)
 vt = np.zeros((len(matriz), 1))
-for j in range(len(matriz)):
+for j in range(len(vt)):
     vt[j, 0] = v[0, j]
 print(vt)
 

@@ -4,6 +4,8 @@ print(matriz)
 
 # diagonal = np.arange(matriz[range(0, 4), range(0, 4)])
 
+# print(tablero[range(0, 7), range(0, 7)]) Diagonal principal
+
 
 # Recorrer matriz invertida
 matriz_1 = [[0, 1,  2,  3],
